@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Clima en {{ ciudad }}{% endblock %}
+
+{% block content %}
+    <h2>Clima actual en {{ ciudad }}</h2>
+        <ul>
+            <li>Temperatura: {{ clima.temperature }} °C</li>
+            <li>Viento: {{ clima.windspeed }} km/h</li>
+            <li>Dirección del viento: {{ clima.winddirection }}°</li>
+        </ul>
+    <p><a href="/">Volver</a></p>
+{% endblock %}
