@@ -4,16 +4,7 @@
 
 {% block content %}
     <h2>Ciudades disponibles</h2>
-    <ul>
-        <li><a href="/clima?ciudad=Buenos%20Aires">Buenos Aires</a></li>
-        <li><a href="/clima?ciudad=Córdoba">Córdoba</a></li>
-        <li><a href="/clima?ciudad=Madrid">Madrid</a></li>
-        <li><a href="/clima?ciudad=Nueva%20York">Nueva York</a></li>
-        <li><a href="/clima?ciudad=Tokio">Tokio</a></li>
-        <li><a href="/clima?ciudad=París">París</a></li>
-        <li><a href="/clima?ciudad=Londres">Londres</a></li>
-        <li><a href="/clima?ciudad=Sídney">Sídney</a></li>
-        <li><a href="/clima?ciudad=Ciudad%20de%20México">Ciudad de México</a></li>
-        <li><a href="/clima?ciudad=El%20Cairo">El Cairo</a></li>
-    </ul>
+    {% for nombre in ciudades %}
+    <li><a href="/clima?ciudad={{ nombre }}">{{ nombre }}</a></li>
+{% endfor %}
 {% endblock %}

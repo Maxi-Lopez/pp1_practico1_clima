@@ -5,9 +5,16 @@
 {% block content %}
     <h2>Clima actual en {{ ciudad }}</h2>
         <ul>
+           
             <li>Temperatura: {{ clima.temperature }} °C</li>
             <li>Viento: {{ clima.windspeed }} km/h</li>
-            <li>Dirección del viento: {{ clima.winddirection }}°</li>
+            <li>Condición del clima: {{ code }}</li>
+            {% if clima.is_day %}
+                <li>Es de dia</li>
+            {% else %}
+                <li>Es de noche</li>
+            {% endif %}
         </ul>
     <p><a href="/">Volver</a></p>
 {% endblock %}
+  
