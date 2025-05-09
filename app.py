@@ -40,8 +40,6 @@ descripciones_weathercode = {
     99: "Tormenta con granizo severo"
 }
 
-
-
 @app.route('/')
 def index():
     return render_template('index.html', ciudades=ciudades.keys())
